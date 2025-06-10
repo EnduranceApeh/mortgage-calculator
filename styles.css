@@ -1,0 +1,282 @@
+body,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(202, 86%, 94%);
+    font-size: 13px;
+    color:  hsl(200, 26%, 54%);
+    height: 100vh;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 600px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+}
+.form-section{
+     padding: 20px 20px 30px 20px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.header h1{
+    font-size: 16px;
+    color: black;
+}
+.header p{
+    font-size: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+label, .label{
+    display: block;
+    margin-bottom: 7px;
+    font-size: 11px;
+}
+.amount-container{
+    position: relative;
+}
+.amount-container input{ 
+    font-size: 10px;
+    width: 100%;
+    height: 25px;
+    border: 0.3px solid hsl(200, 24%, 40%);
+    padding-left: 39px;
+}
+
+.amount-prefix-placeholder{
+    position: absolute;
+    left: 0px;
+    background-color: hsl(202, 86%, 94%);
+    padding: 4.5px;
+    margin-left: 0.3px;
+    margin-top: 0.3px;
+    width: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+.terms-rate-container{
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.term-container,
+.rate-container{
+    position: relative;
+}
+.term-container input,
+.rate-container input{
+    font-size: 10px;
+    width: 100%;
+    height: 25px;
+    border: 0.3px solid hsl(200, 24%, 40%);
+    padding-left: 10px;
+}
+.term-prefix-placeholder,
+.rate-prefix-placeholder{
+    position: absolute;
+    background-color: hsl(202, 86%, 94%);
+    padding: 6.2px;
+    margin-right: 0.3px;
+    margin-top: 0.3px;
+    width: 30px;
+    text-align: center;
+    right: 0;
+    font-size: 10px;
+    font-weight: 600;
+}
+input[type="text"]:focus{
+    outline: none;
+    border-color: hsl(61, 70%, 52%);
+}
+input:focus ~ .term-prefix-placeholder,
+input:focus ~ .rate-prefix-placeholder,
+input:focus ~ .amount-prefix-placeholder{
+    background-color: hsl(61, 70%, 52%);
+}
+.result-section{
+    padding: 45px;
+    background-color: hsl(202, 55%, 16%);
+}
+.interest-radio-container,
+.repayment-radio-container{
+    border: 0.77px solid  hsl(200, 24%, 40%);
+    margin-bottom: 10px;
+    border-radius: 2px;
+    padding: 10px 0 2px 10px;
+    color: black;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+}
+.interest-radio-container:hover,
+.repayment-radio-container:hover{
+    border-color: hsl(61, 70%, 52%);
+}
+.interest-radio-container label,
+.repayment-radio-container label{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 7px;
+}
+
+.calculate-btn{
+    text-align: center;
+    background-color: hsl(61, 70%, 52%);
+    font-size: 10px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 180px;
+    padding: 8px 12px 8px 5px;
+    border-radius: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.calculator-icon{
+    width: 12px;
+    margin-right: 7px;
+}
+
+.result-section{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 20px 30px 20px;
+    border-radius: 0 10px 10px 40px;
+    background-color: hsl(202, 55%, 16%);
+}
+.illustration-empty img{
+    width: 120px;
+    margin-top: 50px;
+}
+.illustration-empty p:first-of-type{
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.illustration-empty p:nth-child(3){
+    font-size: 11px;
+}
+
+.result-container{
+    text-align: left;
+}
+.result-heading{
+    color: hsl(0, 0%, 100%);
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.gray-text{
+    font-size: 10px;
+    
+    font-weight: 200;
+}
+.bg{
+    background-color: hsl(61, 70%, 52%);
+    width: 100%;
+    padding-top: 2.5px;
+    border-radius: 3px;
+    margin: 0 auto;
+    text-align: left;
+    margin-top: 32px;
+    
+}
+.repayment-container{
+    background-color: hsl(200, 42%, 13%);
+    border-radius: 3px;
+    padding: 16px;
+    
+}
+.monthly-repayment{
+    color: hsl(61, 70%, 52%);
+    font-size: 33px;
+    border-bottom: 0.1px solid hsl(200, 26%, 54%);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    margin-top: 5px;
+}
+.payment-over-term{
+    color: hsl(0, 0%, 100%);
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.prefix-placeholder-error{
+    background-color: hsl(4, 69%, 50%);
+    color: hsl(0, 0%, 100%) ;
+}
+.hide-error-message{
+    color: hsl(4, 69%, 50%);
+    margin-top: 5px;
+    font-size: 10px;
+    opacity: 0;
+}
+.show-error-message{
+    opacity: 1;
+}
+
+@media (max-width : 629px) {
+    body{
+        align-items: start;
+    }
+    .container{
+        grid-template-columns: 1fr;
+    }
+    .header{
+        flex-direction: column;
+        align-items: start;
+        gap: 8px;
+    }
+    .terms-rate-container{
+        flex-direction: column;
+    }
+    .amount-container input{
+        padding-left: 1;
+    }
+    input[type="text"] {
+        height: 40px;
+        vertical-align: middle;
+    }
+    .amount-prefix-placeholder{
+        padding-top: 10px;
+        padding-bottom: 14.4px;
+        width: 40px;
+    }
+    .term-prefix-placeholder,
+    .rate-prefix-placeholder{
+       padding-top: 13.8px;
+       padding-bottom: 13.8px;
+       width: 40px;
+    }
+    .calculate-btn{
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+    .calculator-icon{
+        width: 20px;
+    }
+    .result-section{
+        border-radius: 0;
+    }
+}
