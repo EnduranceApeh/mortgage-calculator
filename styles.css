@@ -256,6 +256,7 @@ input:focus ~ .amount-prefix-placeholder{
     input[type="text"] {
         height: 40px;
         vertical-align: middle;
+	font-size: 16px;
     }
     .amount-prefix-placeholder{
         padding-top: 10px;
