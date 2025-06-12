@@ -44,12 +44,17 @@ function mortgageCalculation(amount, term, rate, type) {
   }
   
 }
+
 //function to convert pounds to pence
 function convertToPence(pounds) {
   console.log(pounds)
   return Math.round(pounds * 100);
 }
 
+function clearForm() {
+	const form = document.getElementById('form');
+	form.reset();
+}
 //result UI
 function resultUI(mortgage) {
   
