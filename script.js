@@ -110,11 +110,15 @@ function clearError(containerSelector, placholderSelector) {
   const prefixPlaceholder = document.querySelector(placholderSelector);
 
   errorMessage.classList.remove('show-error-message');
-  console.log('remove show error', errorMessage)
   prefixPlaceholder.classList.remove('prefix-placeholder-error');
-  console.log('removed prefix error', prefixPlaceholder)
 }
 
+
+// clear button
+document.querySelector('.js-clear-btn').addEventListener('click', () => {
+  const form = document.getElementById('form');
+  form.reset();
+})
 // Add input event Listners to clear error when user types
 document.getElementById('mortgage-amount').addEventListener('input', () => {
   clearError('.amount-container', '.amount-prefix-placeholder.js-prefix-placeholder');
